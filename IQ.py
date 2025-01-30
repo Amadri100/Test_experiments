@@ -1,6 +1,6 @@
 #THIS IS AN IQ TEST
 #Hope the best of results
-
+#IQ results may not be acurate
 
 import random
 
@@ -56,11 +56,8 @@ def qa():
     for x in range(4):
         print(qtn[i])
         usout = input("Answer: ")
-        if usout.lower().replace(" ", "") == ans[i]:
+        if usout.lower().replace(" ", "") == ans[i] or usout.lower().replace(" ", "") == ans2[i]:
             iqDef = addIQ(iqDef)
-            
-        elif usout.lower().replace(" ", "") == ans2[i]:
-           iqDef = addIQ(iqDef)
         else:
            iqDef = resIQ(iqDef)
         while i in isHere:
@@ -68,4 +65,3 @@ def qa():
         isHere.append(i)
     print(f"This is your result {iqDef} points!!!")
 qa()
-#Results may not be acurate
