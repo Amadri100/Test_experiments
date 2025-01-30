@@ -50,7 +50,7 @@ def qa():
     "7",
     "einstein",
     "diamonds",
-    "italy"]
+    "italia"]
     i = random.randint(0, 9) 
     isHere.append(i)
     for x in range(4):
