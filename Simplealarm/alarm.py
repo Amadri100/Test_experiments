@@ -19,5 +19,6 @@ def patternre(time):
         elif unit == 's':
             second = val    
     timeInSec = hour *3600 + minute *60 + second 
-    
-    
+    print(f"Total time is {hour}:{minute}:{second} ")
+    return timeInSec
+print('This program is an alarm')
