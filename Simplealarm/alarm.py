@@ -1,7 +1,8 @@
 import time
 import re
+import os
 
-def patternre(time):
+def patternre(timme):
     "This function will interpret the strings as hours, minutes and seconds"
     pt = r'(\d+)([hms])'
     
@@ -9,7 +10,7 @@ def patternre(time):
     minute = 0
     second = 0
     
-    find = re.findall(pt, time)
+    find = re.findall(pt, timme)
     
     for val, unit in find:
         if unit == 'h':
@@ -21,4 +22,11 @@ def patternre(time):
     timeInSec = hour *3600 + minute *60 + second 
     print(f"Total time is {hour}:{minute}:{second} ")
     return timeInSec
-print('This program is an alarm')
+
+def start():
+    print('This program is an alarm.\nTo use it write a number after the letter h,m or s\n h stands for hour, m for minute and s for second')
+    tm = input(": ")
+    funz = patternre(tm)
+    time.sleep(int(funz))
+    print('timer ended')
+start()
