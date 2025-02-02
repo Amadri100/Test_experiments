@@ -1,6 +1,6 @@
-import time
-import re
-import os
+from time import sleep
+from re import findall as re_findall
+from datetime import timedelta
 
 def patternre(timme):
     "This function will interpret the strings as hours, minutes and seconds"
@@ -10,7 +10,7 @@ def patternre(timme):
     minute = 0
     second = 0
     
-    find = re.findall(pt, timme)
+    find = re_findall(pt, timme)
     
     for val, unit in find:
         if unit == 'h':
@@ -19,14 +19,15 @@ def patternre(timme):
             minute = val
         elif unit == 's':
             second = val    
-    timeInSec = hour *3600 + minute *60 + second 
+    t_Delta = timedelta(hours=int(hour), minutes=int(minute), seconds=int(second))
+
     print(f"Total time is {hour}:{minute}:{second} ")
-    return timeInSec
+    return t_Delta.total_seconds()
 
 def start():
     print('This program is an alarm.\nTo use it write a number after the letter h,m or s\n h stands for hour, m for minute and s for second')
     tm = input(": ")
     funz = patternre(tm)
-    time.sleep(int(funz))
-    print('timer ended')
+    sleep(int(funz))
+    print('timer ended!')
 start()
