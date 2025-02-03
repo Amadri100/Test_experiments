@@ -31,6 +31,8 @@ while True:
     ns = input(': ')
     if ns.lower() == 'y':
         plai()
-    else:
+    elif ns.lower() == 'n':
         break
+    else:
+        print("error try again")
 
