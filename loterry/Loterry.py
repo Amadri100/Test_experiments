@@ -1,6 +1,6 @@
 import random
 
-balance = 12
+
 class tickets:
     "self.num = is the amount of tickets"
     def __init__(self, num):
@@ -36,23 +36,23 @@ def plai(balance):
         balance = balance + prize       
         print("Won")
         print(f"Price is {prize}.")
-        print("Current balance is " + balance+ ".")
+        print("Current balance is " + str(balance) + ".")
     else:
         print('Not won')
-        print("Current balance is " + balance+ ".")
+        print("Current balance is " + str(balance) + ".")
     return balance
 print("""
 This is a lottery.
 each ticket adds $3 to the price
 tickets value $4. You can select how much tickets were sold.
-    """)
-plai()
+""")
+balance = plai(12)
 while True:
     #To play again
     print("Want to play again(y or n)")
     ns = input(': ')
     if ns.lower() == 'y':
-        plai()
+        balance = plai(balance)
     elif ns.lower() == 'n':
         print(f"Final balance {balance}...")
         break
