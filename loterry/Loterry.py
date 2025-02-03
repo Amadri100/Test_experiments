@@ -25,6 +25,8 @@ def plai():
 
     if f == h:
         print("Won")
+    else:
+        print('Not won')
 plai()
 while True:
     print("Want to play again(y or n)")
