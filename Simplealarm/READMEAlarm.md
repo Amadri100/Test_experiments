@@ -18,7 +18,7 @@ Used time.sleep() to pause the program till the time set is finished.
 ### datetime
 used timedelta **time and datetime are different modules**
 timedelta is used to get the seconds output correctly.
-- Trying to use normal multiplication, resulted in an huge number without an aparent reason 
+This modules is recommended if multiplication is used **make the number an int before multiplying**.
 ## Alarm sounds
 - No alarm sounds for compatibility reasons.
 In case of adding a sound playsound module is recommended. Although it will need to be install from pip.
