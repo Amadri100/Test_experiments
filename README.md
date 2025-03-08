@@ -5,3 +5,4 @@ Contains projects that are not long enough for their own repository or just expe
 - An 'iq' test
 - Lottery game
 - A simple alarm
+- some porcentage tools
